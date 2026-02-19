@@ -1,5 +1,5 @@
-ARG JAR_FILE
 FROM eclipse-temurin:21-jre
+ARG JAR_FILE
 WORKDIR /app
-COPY target/${JAR_FILE} /app/app.jar
+COPY $JAR_FILE /app/app.jar
 ENTRYPOINT ["java","-jar","/app/app.jar"]
